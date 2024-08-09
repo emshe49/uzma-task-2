@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+      <form>
+        <h1 align="center">Registration Form</h1>
+        <p>_________________________________________________________________________</p>   
+    
+        <table class="container">
+        <tr class="table">
+          <td>Full Name</td>
+          <td><input type="text" placeholder="Enter Your Name" id="fullname"></td>
+        </tr>
+
+        <tr class="table">
+          <td>Email</td>
+          <td><input type="mail" placeholder="Enter Your Email" id="Email"></td>
+        </tr>
+
+        <tr class="table">
+          <td>Password</td>
+          <td><input type="password" placeholder="password" id="password"></td>
+        </tr>
+
+        <tr class="table">
+          <td>Username</td>
+          <td><input type="username" placeholder="Enter username" id="username"></td>
+        </tr>
+
+        <tr class="table">
+          <td>Phone Number</td>
+          <td><input type="phonenumber" placeholder="Enter Phone Number" id="phonenumber"></td>
+        </tr>
+
+        <tr class="table">
+          <td>Confirm Password</td>
+          <td><input type="confirmpassword" placeholder="confrom password" id="confermpassword"></td>
+        </tr>
+        
+        </table>
+     
+          <input type="Submit" value="Submit" onclick="savedata()" id="submit" >
+      </form>
+
+</body>
+
+<script type="text/javascript">
+
+  function savedata(){
+  let Username,Email,password;
+      Username=document.getElementById("Username").value;
+      Email=document.getElementById("Email").value;
+      password=document.getElementById("password").value;
+
+      localStorage.setItem("Username",Username);
+      localStorage.setItem("Email",Email);
+      localStorage.setItem("password",password);
+  }
+
+</script>
+
+</html>
